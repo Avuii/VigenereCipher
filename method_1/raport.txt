@@ -1,0 +1,28 @@
+METODA 1: Analiza długości hasła w szyfrze Vigenère’a z użyciem IC
+==============================================================================
+
+IC dla tekstu wzorcowego: 0.072702
+
+IC dla H =  2 : 0.045157   | roznica od wzorcowego = 0.027545
+IC dla H =  3 : 0.045108   | roznica od wzorcowego = 0.027594
+IC dla H =  4 : 0.045425   | roznica od wzorcowego = 0.027277
+IC dla H =  5 : 0.072965   | roznica od wzorcowego = 0.000263
+IC dla H =  6 : 0.045072   | roznica od wzorcowego = 0.027630
+IC dla H =  7 : 0.045180   | roznica od wzorcowego = 0.027523
+IC dla H =  8 : 0.045376   | roznica od wzorcowego = 0.027326
+IC dla H =  9 : 0.044581   | roznica od wzorcowego = 0.028122
+IC dla H = 10 : 0.073236   | roznica od wzorcowego = 0.000534
+IC dla H = 11 : 0.045327   | roznica od wzorcowego = 0.027375
+IC dla H = 12 : 0.045446   | roznica od wzorcowego = 0.027256
+IC dla H = 13 : 0.045417   | roznica od wzorcowego = 0.027285
+IC dla H = 14 : 0.045176   | roznica od wzorcowego = 0.027526
+IC dla H = 15 : 0.073020   | roznica od wzorcowego = 0.000318
+IC dla H = 16 : 0.045368   | roznica od wzorcowego = 0.027334
+IC dla H = 17 : 0.045160   | roznica od wzorcowego = 0.027543
+IC dla H = 18 : 0.044444   | roznica od wzorcowego = 0.028258
+IC dla H = 19 : 0.044953   | roznica od wzorcowego = 0.027749
+IC dla H = 20 : 0.073898   | roznica od wzorcowego = 0.001196
+
+Najlepszy kandydat na długość hasła: H = 5
+Średni IC dla tego H: 0.072965
+Różnica od IC wzorcowego: 0.000263

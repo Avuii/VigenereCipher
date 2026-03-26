@@ -1,0 +1,49 @@
+METODA1: Analiza długości hasła w szyfrze Vigenère’a
+z użyciem współczynnika koincydencji (IC)4
+
+Mamy tekst zaszyfrowany szyfrem Vigenère’a.
+
+1. Wybieramy długi tekst wzorcowy
+   - najlepiej o długości większej niż 10000 znaków
+   - tekst powinien być napisany w tym samym języku, co odszyfrowywany tekst
+   - dla tego tekstu obliczamy wzorcowy współczynnik koincydencji IC
+
+2. Zakładamy kolejne długości hasła:
+   H = 2, 3, 4, 5, 6, 7, ..., 20
+
+3. Dla każdej założonej długości hasła H:
+   - dzielimy szyfrogram na H grup
+   - do jednej grupy trafiają litery szyfrowane tym samym znakiem klucza
+
+   Przykład:
+   jeśli H = 3, to tworzymy grupy:
+   G1 = litery z pozycji 1, 4, 7, 10, ...
+   G2 = litery z pozycji 2, 5, 8, 11, ...
+   G3 = litery z pozycji 3, 6, 9, 12, ...
+
+4. Dla każdej grupy liczymy współczynnik koincydencji:
+   IC_1G, IC_2G, ..., IC_HG
+
+5. Następnie obliczamy średnią wartość IC dla danej długości hasła H:
+
+   IC_H = (IC_1G + IC_2G + ... + IC_HG) / H
+
+6. Powtarzamy obliczenia dla wszystkich długości hasła od 2 do 20
+
+Wynik zapisujemy na przykład w takiej postaci:
+
+IC dla tekstu wzorcowego: ...
+
+IC dla H = 2  : ...
+IC dla H = 3  : ...
+IC dla H = 4  : ...
+IC dla H = 5  : ...
+IC dla H = 6  : ...
+IC dla H = 7  : ...
+...
+IC dla H = 20 : ...
+
+Interpretacja:
+- poprawna długość hasła daje zwykle średni IC najbardziej zbliżony do IC tekstu wzorcowego
+- jeśli dla danej wartości H średni IC jest wyraźnie bliższy wartości wzorcowej niż dla innych H,
+  to ta długość hasła jest dobrym kandydatem
