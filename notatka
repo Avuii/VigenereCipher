@@ -1,0 +1,73 @@
+szyfr vigenère’a
+
+📌 Dane wejściowe
+T :  TEKST      A  TEKST      TEKST
+     ABCAB      C  ABCAB      CABCA
+
+T :  TFMSU      C  TFMSU      VELUT
+
+H: ABC
+----------------------------------------
+🧠 Opis działania
+
+T → tekst jawny (plaintext)
+
+H: ABC → hasło (klucz)
+
+Klucz powtarzamy do długości tekstu:
+
+Tekst:   T E K S T
+Klucz:   A B C A B
+----------------------------------------
+🔢 Mapowanie liter
+A = 0
+B = 1
+C = 2
+...
+Z = 25
+-----------------------------------------
+🔄 Szyfrowanie
+C = (P + K) mod 26
+szyfrowanie = (tekst + klucz) mod 26
+-----------------------------------------
+🧮 Przykład
+Tekst:   T  E  K  S  T
+Klucz:   A  B  C  A  B
+
+Litera	P(wartosc)	Klucz	Wynik
+T	    19	        0	    19 → T
+E	    4	        1	    5 → F
+K	    10	        2	    12 → M
+S	    18	        0	    18 → S
+T	    19	        1	    20 → U
+
+👉 Szyfrogram: TFMSU
+-------------------------------------------
+🔁 Wizualizacja (schemat strzałek)
+Tekst:    T    E    K    S    T
+           ↓    ↓    ↓    ↓    ↓
+Klucz:    A    B    C    A    B
+           1    2    3    1    2
+           ↘  ↙  ↘  ↙  ↘  ↙  ↘
+
+Efekt:    T    F    M    S    U
+------------------------------------------
+🔁 Dłuższy przykład
+Tekst:    T F M S U   V E L U T
+Klucz:    A B C A B   C A B C A
+
+Każda litera ma swoją „przesuwkę” wynikającą z klucza.
+--------------------------------------------
+🔓 Deszyfrowanie
+P = (C - K + 26) mod 26
+-------------------------------------------
+📊 Współczynnik koincydencji (IC)
+👉 IC mierzy „powtarzalność” liter i pomaga znaleźć długość klucza.
+
+IC = ( SUMA po wszystkich literach i: ni * (ni - 1) ) / ( N * (N - 1) )
+
+gdzie:
+
+ni  - liczba wystąpień i-tej litery
+N   - długość tekstu (liczba wszystkich liter)
+-------------------------------------------------------------------------------
